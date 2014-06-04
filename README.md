@@ -1,9 +1,8 @@
 # Wilfly8
 
-git clone https://github.com/caiogallo/vagrant-ubuntu-wildfly
-cd vagrant-ubuntu-wildfly
-
-vagrant up
+* git clone https://github.com/caiogallo/vagrant-ubuntu-wildfly
+* cd vagrant-ubuntu-wildfly
+* vagrant up
 
 # Start wildfly
 * cd /vagrant/wildfly/bin
