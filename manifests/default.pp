@@ -91,7 +91,7 @@ class windfly-env{
 	exec { "add_admin_user":
 		command		=> "/vagrant/wildfly/bin/add-user.sh admin password --silent=true",
 		logoutput	=> true,
-		require		=> Exec["extract_wildfly"],
+		require		=> [ Exec["extract_wildfly"], Package["oracle-java7-installer"] ],
 		path		=> "/usr/local/bin:/bin/:/usr/bin",
 	}
 
