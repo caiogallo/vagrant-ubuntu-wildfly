@@ -6,6 +6,9 @@ Vagrant.configure("2") do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.hostname = "windfly"
+  config.vm.network :forwarded_port, guest: 8080, host: 4040
+  config.vm.network :forwarded_port, guest: 9990, host: 9990
+
 
   # Provider-specific configuration so you can fine-tune various backing
   # providers for Vagrant. These expose provider-specific options.
