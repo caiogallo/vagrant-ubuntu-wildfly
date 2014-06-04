@@ -2,6 +2,7 @@
 
 git clone https://github.com/caiogallo/vagrant-ubuntu-wildfly
 cd vagrant-ubuntu-wildfly
+
 vagrant up
 
 # Start wildfly
