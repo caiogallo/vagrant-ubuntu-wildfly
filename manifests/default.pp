@@ -26,7 +26,7 @@ class windfly-env{
     		before => Apt::Ppa["ppa:webupd8team/java"],
 	}
 
-        package { ["oracle-java7-installer"]:
+        package { ["oracle-java8-installer"]:
         	ensure => present,
 	        require => Exec["apt-get update 2"],
   	}
@@ -38,7 +38,7 @@ class windfly-env{
     		user => "vagrant",
     		path    => "/usr/bin/:/bin/",
     		require => Package["curl"],
-    		before => Package["oracle-java7-installer"],
+    		before => Package["oracle-java8-installer"],
     		logoutput => true,
   	}
 
@@ -91,7 +91,7 @@ class windfly-env{
 	exec { "add_admin_user":
 		command		=> "/vagrant/wildfly/bin/add-user.sh admin password --silent=true",
 		logoutput	=> true,
-		require		=> [ Exec["extract_wildfly"], Package["oracle-java7-installer"] ],
+		require		=> [ Exec["extract_wildfly"], Package["oracle-java8-installer"] ],
 		path		=> "/usr/local/bin:/bin/:/usr/bin",
 	}
 
