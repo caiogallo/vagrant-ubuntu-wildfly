@@ -2,7 +2,7 @@ class windfly-env{
 	include apt
 	include maven
 
-	$wildfly_url = "http://download.jboss.org/wildfly/8.1.0.CR2/wildfly-8.1.0.CR2.tar.gz"
+	$wildfly_url = "http://download.jboss.org/wildfly/9.0.0.Final/wildfly-9.0.0.Final.tar.gz"
 	
 	apt::ppa { "ppa:webupd8team/java": }
 
